@@ -6,13 +6,13 @@ const stream = T.stream('statuses/filter', {track: ['grilo', 'grilado']});
 
 // use this to log errors from requests
 function responseCallback (err, data, response) {
-    console.log(id);
+    console.log(response);
 }
    
 // event handler
 stream.on('tweet', tweet => {
       // retweet
-     T.post('statuses/retweet/:id', {id: tweet.id_str}, responseCallback(id));
+     T.post('statuses/retweet/:id', {id: tweet.id_str}, responseCallback());
      // like
-     T.post('favorites/create', {id: tweet.id_str}, responseCallback(id));
+     T.post('favorites/create', {id: tweet.id_str}, responseCallback());
 }, setInterval(responseCallback, 100000));
