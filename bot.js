@@ -6,9 +6,9 @@ const stream = T.stream('statuses/filter', {track: ['grilo', 'grilado']});
 
 // use this to log errors from requests
 function responseCallback (err, data, response) {
-    console.log(err);
+    return
 }
-   
+
 // event handler
 stream.on('tweet', tweet => {
       // retweet
