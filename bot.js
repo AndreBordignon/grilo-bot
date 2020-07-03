@@ -6,7 +6,8 @@ const stream = T.stream('statuses/filter', {track: ['grilo', 'grilado']});
 
 // use this to log errors from requests
 function responseCallback (err, data, response) {
-    return
+    alert('aaa')
+    console.log(err);
 }
 
 // event handler
