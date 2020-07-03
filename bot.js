@@ -15,4 +15,4 @@ stream.on('tweet', tweet => {
      T.post('statuses/retweet/:id', {id: tweet.id_str}, responseCallback());
      // like
      T.post('favorites/create', {id: tweet.id_str}, responseCallback());
-}, setInterval(responseCallback, 100000));
+});
